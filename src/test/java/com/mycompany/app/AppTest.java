@@ -36,10 +36,22 @@ public class AppTest
         try {
             assertEquals("Hello World!" + System.getProperty("line.separator"), outContent.toString());
         } catch (AssertionError e) {
-            fail("\"message\" is not \"Hello World!\"");
+            fail("\"message\" is not \"Hello World! \"");
         }
     }
 
+    @Test
+    public void testAppCalc()
+    {
+        try {
+            int res=App.calc(5,10);
+            int expected=5+10;
+            assertEquals(expected, res);
+        } catch (AssertionError e1) {
+            fail("Not 50");
+        }
+    }
+    
     @After
     public void cleanUpStreams() {
         System.setOut(null);
