@@ -8,7 +8,7 @@
   <name>my-app</name>
   <url>http://maven.apache.org</url>
   <properties>
-		<jacoco.version>0.8.6</jacoco.version>
+		<jacoco.version>0.7.5.201505241946</jacoco.version>
 		<junit.version>4.12</junit.version>
 	</properties>
   <dependencies>
@@ -47,18 +47,6 @@
           </archive>
         </configuration>
       </plugin>
-	    <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-surefire-plugin</artifactId>
-            <version>2.19.1</version>
-            <configuration>
-                <printSummary>false</printSummary>
-                <redirectTestOutputToFile>true</redirectTestOutputToFile>
-                <forkCount>3</forkCount>
-                <reuseForks>true</reuseForks>
-                <argLine>${surefireArgLine} -Xmx1024m -noverify</argLine>                  
-            </configuration>
-        </plugin>
       <plugin>
 				<groupId>org.jacoco</groupId>
 				<artifactId>jacoco-maven-plugin</artifactId>
