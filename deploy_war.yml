@@ -9,5 +9,5 @@
       ansible.builtin.copy:
         src: ./target/my-app-1.0-SNAPSHOT.jar
         dest: /usr/src/app/simple.jar
-    - name: Pull and run Tomcat
-      shell: "docker run -p 80:8080 -v /usr/src/app:/usr/local/tomcat/webapps -d tomcat:8.0-alpine"
+    - name: Copy executable to Tomcat container
+      shell: "docker cp simple.war tomcat:/usr/local/tomcat/webapps"
