@@ -9,7 +9,7 @@
       ansible.builtin.copy:
         src: ./target/my-app-1.0-SNAPSHOT.jar
         dest: /usr/src/app/simple.jar
-#     - name: Copy executable to Tomcat container
-#       shell: "docker cp simple.war tomcat:/usr/local/tomcat/webapps"
+    - name: Copy executable to Tomcat container
+      shell: "docker cp simple.war tomcat:/usr/local/tomcat/webapps"
     - name: Restart Container
       shell: "docker restart tomcat"
